@@ -1,0 +1,40 @@
+<div class="container">
+    <div class="header">
+        <text class="title">Fall Lite</text>
+        <text class="status">{{ statusText }}</text>
+    </div>
+    <div class="alert-overlay" show="{{ alertVisible }}">
+        <text class="alert-title">FALL!</text>
+        <text class="alert-message">Fall detected!</text>
+        <div class="btn-ok" onclick="dismissAlert">
+            <text class="btn-text">I'M OK</text>
+        </div>
+    </div>
+
+    <div class="sensor-scroll" show="{{ !alertVisible }}">
+        <div class="sensor-box">
+            <text class="label">Raw Accel (m/s²)</text>
+            <text class="value">{{ accText }}</text>
+        </div>
+
+        <div class="sensor-box">
+            <text class="label">Gyro (rad/s)</text>
+            <text class="value">{{ gyroText }}</text>
+        </div>
+
+        <div class="sensor-box highlight">
+            <text class="label">Gravity Vector</text>
+            <text class="value">{{ gravityText }}</text>
+        </div>
+
+        <div class="sensor-box highlight">
+            <text class="label">Linear Accel</text>
+            <text class="value">{{ linAccText }}</text>
+        </div>
+        <div class="controls">
+            <div class="btn-main" onclick="toggleMonitoring">
+                <text>{{ btnText }}</text>
+            </div>
+        </div>
+    </div>
+</div>
